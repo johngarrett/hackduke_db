@@ -23,7 +23,6 @@ exports.new = function (req, res) {
     message.time = req.body.time
     message.id = req.body.id
     message.msg = req.body.msg
-    message.score = req.body.score
 
     message.save(function (err) {
 	if (err)

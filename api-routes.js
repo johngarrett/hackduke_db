@@ -19,8 +19,5 @@ router.route('/messages')
 
 router.route('/messages/:message_id')
     .get(messageController.view)
-    .patch(messageController.update)
-    .put(messageController.update)
-    .delete(messageController.delete)
 //Export API routes
 module.exports = router;

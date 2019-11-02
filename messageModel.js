@@ -9,11 +9,10 @@ var messageSchema = mongoose.Schema({
         type: String,
         required: true
     }, 
-    msg {
+    msg: {
         type: String,
         required: true
     }
-    score: int
 })
 
 // export message model
