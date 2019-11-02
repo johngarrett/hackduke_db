@@ -11,5 +11,16 @@ router.get('/', function (req, res) {
 	});
 });
 
+var messageController = require('./messageController.js')
+// message route
+router.route('/messages')
+    .get(messageController.index)
+    .post(messageController.new)
+
+router.route('/messages/:message_id')
+    .get(messageController.view)
+    .patch(messageController.update)
+    .put(messageController.update)
+    .delete(messageController.delete)
 //Export API routes
 module.exports = router;
